@@ -1,0 +1,127 @@
+.menuContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+body {
+    background-color: #ff0000;
+    background-image: url("ressources/asfalt-light.png");
+    cursor: url("ressources/green-arrow.png"), auto;
+    overflow: hidden;
+}
+
+.menuTitle {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+}
+
+a {
+    cursor: url("ressources/custom-pointer.png"), auto;
+}
+a:checked {
+    text-decoration: underline;
+}
+
+.menu {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+}
+
+/* Container de la board */
+.telecran {
+    width: 55%;
+    margin: auto;
+    position: relative;
+    top: 2em;
+    left: 0;
+}
+
+/* Style de la board */
+.telecran img {
+    border-radius: 2%;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.329);
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+}
+
+/* Taille et caractéristiques de la zone de dessin */
+.drawArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.5%, -53%);
+    width: 70%;
+    height: 58%;
+    -webkit-transform: translate(-49.5%, -53%);
+    -moz-transform: translate(-49.5%, -53%);
+    -ms-transform: translate(-49.5%, -53%);
+    -o-transform: translate(-49.5%, -53%);
+}
+/* Canvas responsive */
+#responsiveCanvas {
+    width: 100%;
+    object-fit: contain;
+}
+
+/*/////////////////SHAKE ANIMATION/////////////////////*/
+.shake {
+    animation: shake-animation 1s ease-in-out;
+    transform-origin: 50% 50%;
+    -webkit-animation: shake-animation 1s ease-in-out;
+}
+@keyframes shake-animation {
+    0% { transform:translate(0,0) }
+    7% { transform:rotate(3deg); -webkit-transform:rotate(3deg); -moz-transform:rotate(3deg); -ms-transform:rotate(3deg); -o-transform:rotate(3deg); }
+    15% { transform:translate(10px,0) ; -webkit-transform:translate(10px,0) ; -moz-transform:translate(10px,0) ; -ms-transform:translate(10px,0) ; -o-transform:translate(10px,0) ; }
+    25% { transform:rotate(-5deg); -webkit-transform:rotate(-5deg); -moz-transform:rotate(-5deg); -ms-transform:rotate(-5deg); -o-transform:rotate(-5deg); }
+    30% { transform:translate(0,10px) ; -webkit-transform:translate(0,10px) ; -moz-transform:translate(0,10px) ; -ms-transform:translate(0,10px) ; -o-transform:translate(0,10px) ; }
+    45% { transform:translate(15px,0) ; -webkit-transform:translate(15px,0) ; -moz-transform:translate(15px,0) ; -ms-transform:translate(15px,0) ; -o-transform:translate(15px,0) ; }
+    60% { transform:translate(0,0) ; -webkit-transform:translate(0,0) ; -moz-transform:translate(0,0) ; -ms-transform:translate(0,0) ; -o-transform:translate(0,0) ; }
+    75% { transform:translate(5px,10px) ; -webkit-transform:translate(5px,10px) ; -moz-transform:translate(5px,10px) ; -ms-transform:translate(5px,10px) ; -o-transform:translate(5px,10px) ; }
+    100% { transform:translate(0,0) }
+}
+
+/*/////////////////INSTRUCTION/////////////////////*/
+
+.modal {
+    margin: auto;
+    margin-top: 15rem;
+    border: white solid 2px;
+    width: 80%;
+    height: 80%;
+}
+.typing {
+    position: relative;
+    color:rgb(255, 255, 255);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    margin:10%;
+}
+.typing::after {
+    content: "";
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 1px;
+    height: 1rem;
+    border-right: solid 10px ;
+    animation:blink 1s infinite ease-in-out;
+    -webkit-animation:blink 1s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
