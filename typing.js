@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let text = ['Draw stuffs with ◁ ▷ △ ▽ and loose it as soon you shake the board using Spacebar.']
+  let text = ["80's kids didn't know anything about smartphones and little devices. Please connect from a proper computer to play TELECRAN."]
   // count gives the function the lenght of the item in the array.
   let count = 0;
   // index allows the function to jump to and type next letter.

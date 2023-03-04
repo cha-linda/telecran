@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
     let telecran = document.querySelector('.telecran')
     let canvasDom = document.querySelector('#responsiveCanvas')
     let ctx = canvasDom.getContext('2d')
@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let maxW = canvasDom.width
     let maxH = canvasDom.height
     let square = {
-                x: 2,
+        x: 2,
         y: 2,
-        length: 1
+        length: 2
     };
     /*///////////////////////////////////////////////////////////////////////////////////////////////////*/
     /*/////////////////////////////////// SNAKE TEMPLATE (SUPPR CLEAR) //////////////////////////////////*/
@@ -56,4 +56,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 1000)
         }
     });
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*//////////////////////////////////////// DISPLAY MODAL ////////////////////////////////////////////*/
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+    if (window.screen.width <= 991) {
+        let modal = document.getElementById('modal');
+        let main = document.querySelector('main');
+            console.log('mobile');
+            modal.style.display = "flex";
+            main.style.display = "none";
+        
+    }
+
+
+
 });
+
