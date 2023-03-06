@@ -180,7 +180,7 @@ a:checked {
     font-family: "Courier New", monospace;
     font-weight: bold;
     margin: 2em;
-    font-size: 1.5em;
+    font-size: 1.35em;
 }
 .typing::after {
     content: "";
